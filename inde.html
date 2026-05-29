@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根上を応援しよう！公式ファンサイト</title>
+    <style>
+        /* 全体のリセットと基本スタイル */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7f9fa;
+        }
+
+        /* ヘッダー・ナビゲーション */
+        header {
+            background-color: #1a365d; /* 信頼と情熱を表すネイビー */
+            color: #fff;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e53e3e; /* アクセントカラーの赤 */
+        }
+
+        /* メインビジュアル（ヒーローセクション） */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e53e3e;
+            color: #fff;
+            padding: 12px 36px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        /* コンテンツエリア共通 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #1a365d;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #e53e3e;
+            border-radius: 2px;
+        }
+
+        /* 応援メッセージカード・グリッド */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #1a365d;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2b6cb0;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #1a365d;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* レスポンシブ対応（スマホ向け） */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">根上を応援！</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">概要</a></li>
+                    <li><a href="#cheer">応援メッセージ</a></li>
+                    <li><a href="#join">参加する</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>根上を応援しよう！</h1>
+            <p>みんなの熱い声援で、根上の活動やチームをさらに盛り上げよう！団結の力で勝利と成功を掴み取れ！</p>
+            <a href="#join" class="btn">今すぐ応援に参加する</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section id="about">
+            <h2 class="section-title">根上応援プロジェクトについて</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: #4a5568;">
+                <p>このページは、地域の誇りである「根上」の活躍を広く発信し、ファンが一丸となってエールを送るための特設応援サイトです。デザインは力強い青と情熱の赤をベースに、地域の皆さまが使いやすいシンプルな構成を目指しています。</p>
+            </div>
+        </section>
+
+        <section id="cheer">
+            <h2 class="section-title">みんなからのエール</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🔥 いつでも全力応援！</h3>
+                    <p>日頃の練習の成果を信じて、最後まで走り抜けてください！みんながついています！</p>
+                </div>
+                <div class="card">
+                    <h3>輝け、根上の星！</h3>
+                    <p>一戦一戦、一瞬一瞬を大切に。素晴らしいパフォーマンスを期待しています！</p>
+                </div>
+                <div class="card">
+                    <h3>地域一丸となって</h3>
+                    <p>地元の誇りである皆さんの活躍が、私たちの元気の源です。がんばれ根上！</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" style="text-align: center; background-color: #edf2f7; padding: 40px; border-radius: 8px;">
+            <h2 style="margin-bottom: 15px; color: #1a365d;">あなたも応援団の一員に！</h2>
+            <p style="margin-bottom: 25px; color: #4a5568;">SNSでのシェアや、会場での声援（またはオンラインコミュニティへの参加）をお待ちしています。</p>
+            <a href="#" class="btn" onclick="alert('応援ありがとうございます！'); return false;">メッセージを届ける</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 根上応援ファンコミュニティ. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
